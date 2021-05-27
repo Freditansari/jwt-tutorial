@@ -34,7 +34,7 @@ public class User {
 
     @NotBlank
     @Size(max=15)
-    private String userName;
+    private String username;
 
     @NaturalId
     @NotBlank
@@ -59,7 +59,7 @@ public class User {
     public User(@NotBlank @Size(max = 40) String name, @NotBlank @Size(max=15) String userName, @NotBlank @Size(max = 40)  String email,@NotBlank @Size(max = 100)  String password) {
 
         this.name = name;
-        this.userName = userName;
+        this.username = userName;
         this.email = email;
         this.password = password;
 
@@ -81,12 +81,12 @@ public class User {
         this.name = name;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String userName) {
+        this.username = userName;
     }
 
     public String getEmail() {
@@ -118,7 +118,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", userName='" + userName + '\'' +
+                ", userName='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", roles=" + roles +
