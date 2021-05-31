@@ -1,6 +1,7 @@
 package com.merdekacloud.jwttutorial.Config;
 
-import com.merdekacloud.jwttutorial.Services.UserDetailsServiceImpl;
+//import com.merdekacloud.jwttutorial.Services.UserDetailsServiceImpl;
+import com.merdekacloud.jwttutorial.Services.UserDetailsServiceImplcustom;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class JwtAuthTokenFilter extends OncePerRequestFilter {
     private JwtTokenProvider jwtTokenProvider;
 
     @Autowired
-    private UserDetailsServiceImpl userDetailsService;
+    private UserDetailsServiceImplcustom userDetailsService;
 
     private static final Logger logger = LoggerFactory.getLogger(JwtAuthTokenFilter.class);
 

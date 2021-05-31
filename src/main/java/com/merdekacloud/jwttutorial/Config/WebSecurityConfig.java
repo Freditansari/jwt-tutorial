@@ -1,6 +1,7 @@
 package com.merdekacloud.jwttutorial.Config;
 
-import com.merdekacloud.jwttutorial.Services.UserDetailsServiceImpl;
+import com.merdekacloud.jwttutorial.Services.UserDetailsServiceImplcustom;
+//import com.merdekacloud.jwttutorial.Services.UserDetailsServiceImplcustom;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +23,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 )
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
-    UserDetailsServiceImpl userDetailsService;
+    UserDetailsServiceImplcustom userDetailsServiceImplcustom;
 
     @Autowired
     private JwtAuthEntryPoint unauthorizedHandler;
@@ -35,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         authenticationManagerBuilder
-                .userDetailsService(userDetailsService)
+                .userDetailsService(userDetailsServiceImplcustom)
                 .passwordEncoder(passwordEncoder());
     }
 
